@@ -1,0 +1,32 @@
+{
+  "name": "imagemin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "fs-extra": "^11.1.1",
+    "gifsicle": "5.2.0",
+    "imagemin": "^7.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^9.0.0",
+    "imagemin-webp": "^6.0.0",
+    "jpegtran-bin": "^6.0.1",
+    "koa": "^2.14.2",
+    "koa-router": "^12.0.0"
+  },
+  "scripts": {
+    "dev": "node index.js",
+    "build": "docker-compose -f build.yml up -d",
+    "docker:run": "docker build -t nodeapp .",
+    "start": "node index.js"
+  },
+  "resolutions": {
+    "bin-wrapper": "npm:bin-wrapper-china",
+    "gifsicle": "5.2.0"
+  }
+}

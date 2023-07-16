@@ -1,0 +1,12 @@
+version: "3"
+services:
+  app:
+    platform: linux/amd64
+    image: imagemin
+    container_name: imagemin
+    ports:
+      - "3003:3003"
+    build:
+      context: ./ # 指定dockerfile文件的所在路径
+      dockerfile: Dockerfile # 指定Dockerfile文件名称
+    command: npm run start
